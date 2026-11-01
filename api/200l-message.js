@@ -5,7 +5,7 @@ const MAX_ATTEMPTS_PER_IP = 300;
 const buckets = globalThis.__examMessageRateBuckets || (globalThis.__examMessageRateBuckets = new Map());
 
 function normalizeSurname(value) {
-  return String(value || '').normalize('NFKC').trim().replace(/\\s+/g, ' ').toLocaleLowerCase('en-US');
+  return String(value || '').normalize('NFKC').trim().replace(/\s+/g, ' ').toLocaleLowerCase('en-US');
 }
 
 function getBody(req) {
@@ -55,7 +55,7 @@ module.exports = async function handler(req, res) {
   const body = getBody(req);
   const surname = normalizeSurname(body.surname);
   const cardNumber = String(body.cardNumber || '').trim();
-  if (!surname || surname.length > 60 || !/^\\d{4}$/.test(cardNumber)) {
+  if (!surname || surname.length > 60 || !/^\d{4}$/.test(cardNumber)) {
     return send(res, 400, { ok: false, message: 'Enter your surname and exactly four matriculation digits.' });
   }
 
