@@ -6,3 +6,31 @@
 .flyer-wrap{max-width:760px}
 .flyer-wrap img{display:block;width:100%;height:auto;max-height:1200px;object-fit:contain;border-radius:5px;box-shadow:0 24px 65px rgba(0,0,0,.35)}
 @media(max-width:650px){.flyer-section{padding:28px 0}.flyer-wrap{width:calc(100% - 28px)}}
+
+/* 200L exam message page and homepage feature */
+.exam-promo{background:#0c1319;border-bottom:1px solid var(--line)}
+.exam-promo-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}
+.exam-promo h2{margin:15px 0}.exam-promo .lead{max-width:550px}
+.exam-hero{padding:100px 0 70px;background:radial-gradient(ellipse at 85% 10%,rgba(201,243,106,.12),transparent 42%)}
+.exam-hero h1{font-size:clamp(4rem,10vw,8rem);line-height:.84;letter-spacing:-.1em;margin:25px 0;font-weight:1000}
+.exam-hero h1 em{font-style:normal;color:var(--lime)}
+.exam-intro{max-width:700px;color:#d0d9dd;font-size:1.05rem}
+.exam-layout{padding:60px 0 100px;background:var(--bg2)}
+.exam-panel{max-width:680px;margin:0 auto;background:#f2f3ef;color:#101820;padding:clamp(25px,5vw,52px);border-top:5px solid var(--lime);box-shadow:0 25px 70px rgba(0,0,0,.23)}
+.exam-panel .eyebrow{color:#638126}
+.exam-panel h2{font-size:clamp(2rem,5vw,3.2rem);margin:12px 0}
+.exam-panel .helper{color:#59636a;font-size:.9rem;line-height:1.65}
+.exam-form{display:grid;gap:18px;margin-top:30px}
+.exam-form label{display:grid;gap:8px;font-size:.75rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
+.exam-form input{width:100%;min-height:54px;border:1px solid #c9cec3;background:#fff;color:#101820;padding:14px 16px;font:inherit;font-size:1rem;outline:none;border-radius:0}
+.exam-form input:focus{border-color:#789b2b;box-shadow:0 0 0 3px rgba(201,243,106,.35)}
+.exam-form button{min-height:54px;border:0;background:#101820;color:#c9f36a;font:inherit;font-size:.78rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.exam-form button:disabled{opacity:.6;cursor:wait}
+.exam-status{min-height:28px;margin-top:18px;color:#59636a;font-size:.9rem}
+.exam-result{display:none;margin-top:25px;padding:25px;background:#e6e9df;border-left:4px solid #a4cf42}
+.exam-result.visible{display:block}
+.exam-result h3{margin:0 0 12px;font-size:1.4rem;color:#101820}
+.exam-result p{margin:0;color:#29323a;line-height:1.8;font-size:1rem}
+.exam-signoff{margin-top:18px!important;font-weight:900;color:#607e27!important}
+.exam-privacy{margin:25px 0 0;color:#687078;font-size:.74rem;line-height:1.6}
+@media(max-width:650px){.exam-promo-inner{align-items:flex-start;flex-direction:column}.exam-hero{padding:75px 0 50px}.exam-layout{padding:35px 0 65px}.exam-panel{width:calc(100% - 28px);padding:25px 20px}}

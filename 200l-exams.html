@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#101820"><meta name="description" content="A personal message for each 200-level EKSUMSA student as examinations begin."><title>A Message for You | 200L EKSUMSA</title><link rel="stylesheet" href="styles.css"></head>
+<body class="exam-page"><header class="site-header"><div class="wrap nav"><a class="brand" href="index.html"><i></i>BREEZY<span>.</span></a><nav><a href="index.html#about">About</a><a href="index.html#record">Track record</a><a href="index.html#vision">Vision</a><a href="index.html#blueprint">Blueprint</a><a href="newsroom.html">Newsroom</a><a href="declaration.html">Declaration</a><a href="200l-exams.html">200L messages</a></nav><a class="nav-cta" href="index.html">Campaign home</a></div></header>
+<main><section class="exam-hero"><div class="wrap"><p class="eyebrow">EKSUMSA · 200 LEVEL · EXAM SEASON</p><h1>YOUR EXAMS.<br><em>YOUR MOMENT.</em></h1><p class="exam-intro">Tomorrow marks the beginning of another important academic milestone. Every hour of preparation, every revision session and every sacrifice has brought you here. As you take on your papers, stay calm, trust your preparation and give each question your best.</p><p class="exam-intro"><strong>There is a personal note waiting for every member of the 200L class.</strong></p></div></section>
+<section class="exam-layout"><div class="wrap"><div class="exam-panel"><p class="eyebrow">A PERSONAL NOTE FOR YOU</p><h2>Find your message.</h2><p class="helper">Enter your surname as it appears on the class list and the last four digits of your matriculation number. Your details are used only to retrieve your message.</p>
+<form class="exam-form" id="examLookup" autocomplete="off"><label for="surname">Surname<input id="surname" name="surname" type="text" maxlength="60" placeholder="Enter your surname" required autocomplete="family-name" spellcheck="false"></label><label for="cardNumber">Card number · Last 4 digits of matric number<input id="cardNumber" name="cardNumber" type="text" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" minlength="4" placeholder="e.g. 0427" required autocomplete="off"></label><button id="lookupButton" type="submit">Show my message</button></form>
+<p class="exam-status" id="examStatus" role="status" aria-live="polite"></p><div class="exam-result" id="examResult" aria-live="polite"><h3 id="resultHeading"></h3><p id="resultMessage"></p><p class="exam-signoff">— BREEZY</p></div><p class="exam-privacy">Please enter your own details. The page will display only the message matched to your entry; it does not provide access to the class list or anyone else's message.</p></div></div></section></main>
+<footer><div class="wrap foot"><span>© 2026 BREEZY · DIRECTOR OF SPORTS CAMPAIGN</span><span>AYAMOLOWO BOLUWATIFE RUBEN · EKSUMSA 2026/2027</span><a href="index.html">CAMPAIGN HOME ↑</a></div></footer>
+<script>
+(() => {
+  const form=document.getElementById('examLookup');
+  const button=document.getElementById('lookupButton');
+  const status=document.getElementById('examStatus');
+  const result=document.getElementById('examResult');
+  const heading=document.getElementById('resultHeading');
+  const message=document.getElementById('resultMessage');
+  const card=document.getElementById('cardNumber');
+  card.addEventListener('input',()=>{card.value=card.value.replace(/\\D/g,'').slice(0,4);});
+  form.addEventListener('submit',async(event)=>{
+    event.preventDefault(); result.classList.remove('visible'); status.textContent='Checking your details…'; button.disabled=true; button.textContent='Checking…';
+    try{
+      const response=await fetch('/api/200l-message',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({surname:form.surname.value,cardNumber:card.value})});
+      const data=await response.json().catch(()=>({}));
+      if(!response.ok||!data.ok){status.textContent=data.message||'We could not retrieve your note. Please check your details and try again.';return;}
+      heading.textContent='A message for '+data.firstName;
+      message.textContent=data.message;
+      result.classList.add('visible'); status.textContent='Your personal message is ready.';
+    }catch(error){status.textContent='Unable to connect right now. Please try again.';}
+    finally{button.disabled=false;button.textContent='Show my message';}
+  });
+})();
+</script></body></html>
