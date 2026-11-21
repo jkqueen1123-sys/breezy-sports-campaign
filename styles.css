@@ -34,3 +34,90 @@
 .exam-signoff{margin-top:18px!important;font-weight:900;color:#607e27!important}
 .exam-privacy{margin:25px 0 0;color:#687078;font-size:.74rem;line-height:1.6}
 @media(max-width:650px){.exam-promo-inner{align-items:flex-start;flex-direction:column}.exam-hero{padding:75px 0 50px}.exam-layout{padding:35px 0 65px}.exam-panel{width:calc(100% - 28px);padding:25px 20px}}
+
+/* Manifesto & strategic action plan */
+.manifesto-hero{padding:100px 0 72px;background:radial-gradient(ellipse at 85% 14%,rgba(201,243,106,.14),transparent 42%),var(--bg);border-bottom:1px solid var(--line)}
+.manifesto-kicker{font-size:clamp(1.6rem,4vw,3.6rem);font-weight:950;letter-spacing:-.075em;line-height:1;margin:30px 0 4px}
+.manifesto-hero h1{font-size:clamp(5rem,15vw,11rem);line-height:.78;letter-spacing:-.12em;margin:0;font-weight:1000}
+.manifesto-hero h1 em{font-style:normal;color:var(--lime)}
+.manifesto-subtitle{font-size:clamp(.9rem,2vw,1.35rem);font-weight:950;letter-spacing:.12em;margin:28px 0 12px}
+.manifesto-intro{font-size:1.08rem;color:#c5d0d5;max-width:690px}
+.manifesto-meta{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:18px;margin-top:45px;color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.12em}
+.manifesto-overview{padding:90px 0 85px;background:var(--bg2)}
+.manifesto-section-intro{max-width:760px}
+.manifesto-section-intro h2,.manifesto-implementation h2,.governance-grid h2,.manifesto-footer-cta h2{font-size:clamp(2.8rem,6vw,5.4rem)}
+.manifesto-section-intro h2 em,.manifesto-implementation h2 em,.governance-grid h2 em,.manifesto-footer-cta h2 em{font-style:normal;color:var(--lime)}
+.manifesto-vm{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+.manifesto-vm article{padding:26px 28px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.manifesto-vm article p:last-child{color:#d0d9dd;margin-bottom:0}
+.principles{margin-top:55px}
+.principle-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+.principle-grid>div{padding:20px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+.principle-grid b{color:var(--lime);font-size:.72rem;letter-spacing:.1em}
+.principle-grid p{margin:8px 0 0;color:var(--muted);font-size:.88rem}
+.pillar-index{margin-top:65px;padding-top:30px;border-top:1px solid var(--line)}
+.index-head{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.index-head>span{color:var(--muted);font-size:.68rem;font-weight:900;letter-spacing:.1em}
+.index-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.index-grid a{display:grid;grid-template-columns:44px 1fr 20px;align-items:center;gap:12px;padding:15px 18px;border:1px solid var(--line);background:rgba(255,255,255,.025);transition:background .2s,border-color .2s}
+.index-grid a:hover{background:rgba(201,243,106,.08);border-color:rgba(201,243,106,.5)}
+.index-grid b{font-size:1.2rem;color:var(--lime)}
+.index-grid span{font-size:.85rem;font-weight:850;line-height:1.25}
+.index-grid i{font-style:normal;color:var(--lime)}
+.manifesto-pillar{padding:85px 0;border-bottom:1px solid var(--line)}
+.manifesto-pillar:nth-of-type(even){background:var(--bg2)}
+.pillar-heading{display:grid;grid-template-columns:100px 1fr;gap:20px;align-items:start;margin-bottom:34px}
+.pillar-number{font-size:5rem;line-height:.9;font-weight:1000;letter-spacing:-.1em;color:var(--lime)}
+.pillar-heading h2{font-size:clamp(2.3rem,5.2vw,4.6rem);max-width:900px;margin:8px 0 14px}
+.pillar-theme{max-width:790px;color:#c2cdd2;font-size:1.02rem;margin:0}
+.pillar-objective{max-width:900px;padding:22px 25px;margin:0 0 30px;border-left:3px solid var(--lime);background:rgba(201,243,106,.055)}
+.pillar-objective span,.deliverables h3{font-size:.69rem;color:var(--lime);font-weight:950;letter-spacing:.14em}
+.pillar-objective p{color:#e0e6e8;margin:8px 0 0}
+.initiative-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.initiative{border:1px solid var(--line);background:rgba(255,255,255,.025);padding:22px}
+.initiative-top{display:grid;grid-template-columns:42px 1fr;gap:12px}
+.initiative-index{color:var(--lime);font-size:.75rem;font-weight:950;letter-spacing:.08em;padding-top:5px}
+.initiative h3{font-size:1.12rem;line-height:1.2;letter-spacing:-.025em;margin:0 0 10px}
+.initiative-concept{color:var(--muted);font-size:.87rem;line-height:1.5;margin:0}
+.initiative details{margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.initiative summary{cursor:pointer;color:var(--lime);font-size:.7rem;font-weight:950;letter-spacing:.08em;list-style:none}
+.initiative summary::-webkit-details-marker{display:none}
+.initiative summary:after{content:"+";float:right;font-size:1.1rem;line-height:.8}
+.initiative details[open] summary:after{content:"−"}
+.initiative-detail{padding-top:14px}
+.initiative-detail h4{font-size:.64rem;color:var(--lime);letter-spacing:.12em;margin:14px 0 5px}
+.initiative-detail p{color:#c6d0d4;font-size:.86rem;line-height:1.65;margin:0}
+.deliverables{max-width:970px;margin:35px 0 0;padding:25px 28px;background:rgba(201,243,106,.055);border:1px solid rgba(201,243,106,.22)}
+.deliverables h3{margin:0 0 14px}
+.deliverables ul{margin:0;padding-left:19px;display:grid;grid-template-columns:1fr 1fr;gap:10px 28px}
+.deliverables li{color:#d0d9dd;font-size:.84rem;padding-left:3px}
+.manifesto-implementation{padding:90px 0;background:#0c1319}
+.implementation-steps{display:grid;grid-template-columns:1fr 1fr;gap:0 40px;margin-top:38px}
+.implementation-steps article{display:grid;grid-template-columns:48px 1fr;gap:15px;padding:22px 0;border-top:1px solid var(--line)}
+.implementation-steps article>b{font-size:1.5rem;color:var(--lime);font-weight:1000}
+.implementation-steps h3{font-size:1.1rem;margin:0 0 7px}
+.implementation-steps p{color:var(--muted);font-size:.88rem;margin:0}
+.manifesto-governance{padding:90px 0;background:var(--bg2)}
+.governance-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:50px;align-items:start}
+.responsibility-table{border:1px solid var(--line)}
+.responsibility-table>div{display:grid;grid-template-columns:1.05fr 1fr;gap:15px;padding:13px 16px;border-bottom:1px solid var(--line);font-size:.8rem;color:#d1d9dc}
+.responsibility-table>div:last-child{border-bottom:0}
+.responsibility-table>div:first-child{background:var(--lime);color:var(--bg);font-size:.67rem;letter-spacing:.1em;font-weight:950}
+.responsibility-table>div:nth-child(odd):not(:first-child){background:rgba(255,255,255,.025)}
+.conditions{margin-top:65px;padding:28px 30px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+.conditions ul{padding-left:20px;margin:15px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:12px 30px}
+.conditions li{font-size:.85rem;color:var(--muted)}
+.manifesto-commitment{margin-top:65px;max-width:850px;padding-top:30px;border-top:1px solid var(--line)}
+.manifesto-commitment>p:not(.eyebrow){font-size:1.05rem;color:#d0d9dd}
+.manifesto-commitment h2{font-size:clamp(2.8rem,6vw,5.1rem);line-height:.98;letter-spacing:-.08em}
+.manifesto-commitment h2 em{font-style:normal;color:var(--lime)}
+.manifesto-signature{padding-top:18px;border-top:1px solid var(--line)}
+.manifesto-signature strong{display:block;font-size:2rem;letter-spacing:-.06em}
+.manifesto-signature span,.manifesto-signature small{display:block;font-size:.7rem;font-weight:900;letter-spacing:.1em;color:var(--muted)}
+.manifesto-signature small{margin-top:4px}
+.manifesto-footer-cta{padding:80px 0;background:#0c1319}
+.manifesto-footer-cta .wrap{display:flex;align-items:center;justify-content:space-between;gap:35px}
+.manifesto-footer-cta h2{margin:15px 0}
+.cta-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:850px){.initiative-list{grid-template-columns:1fr}.governance-grid{grid-template-columns:1fr;gap:30px}.conditions ul{grid-template-columns:1fr}.principle-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.manifesto-hero{padding:75px 0 50px}.manifesto-meta{flex-direction:column;gap:8px}.manifesto-overview,.manifesto-pillar,.manifesto-implementation,.manifesto-governance{padding:65px 0}.manifesto-vm,.index-grid,.principle-grid,.implementation-steps{grid-template-columns:1fr}.pillar-heading{grid-template-columns:55px 1fr;gap:12px}.pillar-number{font-size:3.3rem}.initiative{padding:18px}.deliverables{padding:20px}.deliverables ul{grid-template-columns:1fr}.responsibility-table>div{grid-template-columns:1fr;gap:5px}.responsibility-table>div:first-child{grid-template-columns:1fr}.manifesto-footer-cta .wrap{align-items:flex-start;flex-direction:column}.index-head{align-items:flex-start;flex-direction:column;gap:0}}
